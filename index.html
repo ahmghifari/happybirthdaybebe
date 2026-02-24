@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Chaeskanacha 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+padding:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to top,#ffdde1,#ee9ca7);
+transition: background 1s ease;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hidden{display:none;}
+
+h1,h2,p{color:white}
+
+/* --------- SURPRISE TEXT SOFT FONT --------- */
+#surpriseText{
+font-family:'Playfair Display',serif;
+font-size:40px;
+letter-spacing:1px;
+color:#c9184a; /* pink bold elegan */
+text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --------- BIRTHDAY EMOJI FALL --------- */
+.bday-emoji{
+position:fixed;
+top:-50px;
+font-size:28px;
+animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+opacity:0.9;
+}
+}
+
+/* ---------------- CAKE ---------------- */
+
+.cake{
+position:relative;
+width:200px;
+height:140px;
+background:#ff8fab;
+border-radius:10px;
+margin:auto;
+box-shadow:0 10px 0 #d63384;
+}
+
+.candle{
+position:absolute;
+width:10px;
+height:40px;
+background:white;
+top:-40px;
+border-radius:3px;
+}
+
+.flame{
+position:absolute;
+width:10px;
+height:15px;
+background:gold;
+border-radius:50%;
+top:-15px;
+animation:flicker .2s infinite alternate;
+}
+
+@keyframes flicker{
+from{transform:scale(1)}
+to{transform:scale(1.2);opacity:.7}
+}
+
+.c1{left:40px}
+.c2{left:95px}
+.c3{left:150px}
+
+/* ------------- GIFT BOX ------------- */
+
+.gift-box{
+width:150px;
+height:150px;
+background:#ff4d6d;
+position:relative;
+margin:auto;
+border-radius:8px;
+}
+
+.gift-ribbon-v{
+position:absolute;
+width:20px;
+height:150px;
+background:white;
+left:65px;
+}
+
+.gift-ribbon-h{
+position:absolute;
+height:20px;
+width:150px;
+background:white;
+top:65px;
+}
+
+.bow{
+position:absolute;
+top:-20px;
+left:35px;
+width:80px;
+height:40px;
+background:white;
+border-radius:50%;
+}
+
+/* ------------- BOUQUET ------------- */
+
+.bouquet{
+    width:320px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#bouquetImg{
+    width:100%;
+    max-width:320px;
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+.stem{
+position:absolute;
+width:4px;
+height:150px;
+background:green;
+bottom:0;
+}
+
+.flower{
+position:absolute;
+width:40px;
+height:40px;
+background:radial-gradient(circle,yellow 40%,orange 60%);
+border-radius:50%;
+top:0;
+}
+
+.ribbon{
+position:absolute;
+bottom:120px;
+left:120px;
+width:60px;
+height:30px;
+background:white;
+border-radius:50%;
+}
+
+/* ------------- LETTER ------------- */
+
+.letter{
+width:600px;
+max-width:90%;
+background:#fff8dc;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+position:relative;
+color:black;
+}
+
+.letter::before{
+content:"🎀";
+position:absolute;
+top:-25px;
+left:50%;
+transform:translateX(-50%);
+font-size:40px;
+}
+
+.letter::after{
+content:"🌻 🤍 🌻 🤍 🌻";
+position:absolute;
+bottom:10px;
+right:20px;
+}
+
+.nav{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.small-text{
+font-size:18px;
+font-weight:bold;
+color:#fff;
+margin-top:15px;
+cursor:pointer;
+background:#ff4d6d;
+display:inline-block;
+padding:8px 18px;
+border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.small-text:hover{
+transform:scale(1.1);
+background:#ff758f;
+}
+
+/* CLOSED LETTER */
+.closed-letter{
+    width:300px;
+    height:200px;
+    background:#fff8dc;
+    position:relative;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    cursor:pointer;
+}
+
+#ribbon{
+    width:100%;
+    height:30px;
+    background:#ff4d6d;
+    position:absolute;
+    top:80px;
+}
+
+#letterLid{
+    width:100%;
+    height:100px;
+    background:#f5deb3;
+    position:absolute;
+    top:0;
+    border-radius:10px 10px 0 0;
+    transition:.6s;
+}
+
+/* GIFT CARD */
+.gift-card{
+    width:650px;
+    max-width:90%;
+    background:#fff8dc;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    position:relative;
+}
+
+.gift-card::before{
+    content:"🌻 🤍 🌻 🤍 🌻";
+    position:absolute;
+    top:10px;
+    right:20px;
+}
+
+.gift-card::after{
+    content:"🤍 🌻 🤍 🌻 🤍";
+    position:absolute;
+    bottom:10px;
+    left:20px;
+}
+
+.card-nav{
+    margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#signature{
+    text-align:right;
+    margin-top:30px;
+    font-style:italic;
+    font-weight:bold;
+}
+
+#skipBtn{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:20px;
+    background:#ff4d6d;
+    color:white;
+    transition:.3s;
+}
+
+#skipBtn:hover{
+    transform:scale(1.1);
+    background:#ff758f;
+}
+
+.bg-photo{
+    background: url('bebe.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+</style>
+</head>
+
+<body>
+<div id="app">
+
+<!-- CAKE -->
+<div id="cakeStage">
+<div class="cake">
+<div class="candle c1"><div class="flame"></div></div>
+<div class="candle c2"><div class="flame"></div></div>
+<div class="candle c3"><div class="flame"></div></div>
+</div>
+<h2 id="cakeText">Press 20 times 🎂</h2>
+</div>
+
+<!-- SURPRISE -->
+<div id="surpriseStage" class="hidden">
+<h1 id="surpriseText" style="opacity:0;transition:2s">Happy Birthday to the Most Beautiful Girl in My World 🤍</h1>
+<p id="rewardText" style="opacity:0;transition:1s">press to get your reward</p>
+</div>
+
+<!-- GIFT -->
+<div id="giftStage" class="hidden">
+<div class="gift-box" id="giftBox">
+<div class="gift-ribbon-v"></div>
+<div class="gift-ribbon-h"></div>
+<div class="bow"></div>
+</div>
+<h3 id="giftClickText">Press 5 times 🎁</h3>
+</div>
+
+<!-- BOUQUET -->
+<div id="bouquetStage" class="hidden">
+<div class="bouquet">
+    <img src="sunflower.jpeg" id="bouquetImg">
+</div>
+<div class="small-text" id="checkText">check</div>
+<div id="miniNote" class="hidden" style="color:white;">
+    To: Chaeskanacha Punjambi A. A.
+    <br><br>
+    <span style="font-size:14px;">
+        Sunflower aslinya nanti yaa pas di Jakarta wkwk 🌻🤍
+    </span>
+</div>
+</div>
+
+<!-- ARROW -->
+<div id="arrowStage" class="hidden">
+<div id="arrowBtn" 
+style="cursor:pointer;font-size:24px;color:#9d0208;font-weight:bold;text-shadow:0 2px 6px rgba(0,0,0,0.2);">
+➡ hey there is another message
+</div>
+</div>
+
+<div id="letterStage" class="hidden">
+
+    <!-- CLOSED LETTER -->
+    <div id="closedLetter" class="closed-letter">
+        <div id="ribbon"></div>
+        <div id="letterLid"></div>
+    </div>
+
+    <!-- GIFT CARD -->
+    <div id="giftCard" class="gift-card hidden">
+        <div class="card-content">
+            <div id="typedText"></div>
+
+            <div id="skipBtn" style="display:none; margin-top:15px; cursor:pointer; font-weight:bold;">
+                Skip ⏩
+            </div>
+
+    <div id="signature" style="display:none;"></div>
+    <div id="cardNav" class="card-nav"></div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<script>
+let cakeClicks=0;
+let giftClicks=0;
+let currentPage=0;
+let musicStarted = false;
+let surpriseReady = false;
+
+document.body.addEventListener("click",function(){
+if(!musicStarted){
+    document.getElementById("bgMusic").play();
+    musicStarted = true;
+}    
+if(!document.getElementById("cakeStage").classList.contains("hidden")){
+
+    cakeClicks++;
+    document.getElementById("cakeText").innerText = `Press ${20-cakeClicks} times 🎂`;
+
+    // Kalau sudah 20 klik
+    if(cakeClicks>=20){
+
+        document.getElementById("cakeStage").classList.add("hidden");
+        document.body.classList.add("bg-photo");
+        document.getElementById("surpriseStage").classList.remove("hidden");
+
+        birthdayRain();
+
+        setTimeout(()=>document.getElementById("surpriseText").style.opacity=1,500);
+        setTimeout(()=>document.getElementById("rewardText").style.opacity=1,5000);
+
+    // ⬇️ TAMBAHAN INI
+    surpriseReady = false;
+
+    setTimeout(()=>{
+        surpriseReady = true;
+    }, 2000);
+
+    }
+}
+});
+
+function birthdayRain(){
+const emojis=["🎉","🎂","🎊","🎈","🥳","🎁"];
+for(let i=0;i<40;i++){
+let e=document.createElement("div");
+e.className="bday-emoji";
+e.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+e.style.left=Math.random()*100+"vw";
+e.style.animationDuration=(2+Math.random()*2)+"s";
+document.body.appendChild(e);
+setTimeout(()=>e.remove(),3000);
+}
+}
+
+
+document.getElementById("surpriseStage").addEventListener("click", function(){
+    if(surpriseReady){
+        document.getElementById("surpriseStage").classList.add("hidden");
+        document.getElementById("giftStage").classList.remove("hidden");
+    }
+});
+
+// ---------------- GIFT CLICK LOGIC ----------------
+document.getElementById("giftStage").addEventListener("click", function(){
+
+if(!document.getElementById("giftStage").classList.contains("hidden")){
+
+    giftClicks++;
+    document.getElementById("giftClickText").innerText = `Press ${5-giftClicks} times 🎁`;
+
+    if(giftClicks >= 5){
+        document.getElementById("giftStage").classList.add("hidden");
+        document.getElementById("bouquetStage").classList.remove("hidden");
+    }
+
+}
+});
+
+// -------- CHECK BUTTON --------
+document.getElementById("checkText").addEventListener("click", function(){
+
+    let note = document.getElementById("miniNote");
+
+    note.classList.remove("hidden");
+    note.style.background="white";
+    note.style.color="black";
+    note.style.padding="15px";
+    note.style.borderRadius="10px";
+    note.style.display="inline-block";
+
+    // langsung munculin arrow
+    document.getElementById("arrowStage").classList.remove("hidden");
+
+});
+
+
+// -------- ARROW TO LETTER --------
+document.getElementById("arrowBtn").addEventListener("click", function(){
+    document.getElementById("bouquetStage").classList.add("hidden");
+    document.getElementById("arrowStage").classList.add("hidden");
+    document.getElementById("letterStage").classList.remove("hidden");
+
+});
+
+// ---------------- LETTER ANIMATION FLOW ----------------
+
+let letterStep = 0;
+let currentCardPage = 0;
+let letterOpened = false;
+let typingInterval = null;
+let isTyping = false;
+
+const cardPages = [
+`Selamat ulang tahun, sayangku, cintaku, dan perempuan paling luar biasa yang pernah hadir di hidup aku. I still can’t believe i’m lucky enough to call you mine haha. Aku bakal selalu berdoa semoga setiap langkah bebe selalu dimudahkan, segala doa bebe dikabulkan, dan setiap mimpi bebe satu per satu jadi kenyataan. I hope you always remember how loved and valued you are. Kalo bebe ngerasa hidup bebe lagi berat, sedih, cape, please remember you can always come to me, i’ll be your safest place, always.`,
+
+`Bebe, thank you for being patient with me, for understanding me, and for loving me the way you do. You deserve the softest love, the brightest future, and the kindest days from me. Maaf kalo aku belum sempurna atau mungkin belum sesuai dengan yg bebe mau yaa. Tapi percayalaa cinta aku ke bebe selalu tulus dan terus tumbuh setiap hariinyaa.`,
+
+`Please don’t be afraid and don’t doubt yourself. You’re just getting started, and I truly believe this is the age where you’ll discover how strong, capable, and amazing you really are. Aku yakin bebe pasti bisa ngelakuin semuanya dengan jauh lebih baik dari yang bebe bayangin. I believe in you, even on days when you don’t believe in yourself.`,
+
+`Bebe itu bukan cuma pacarku, tapi juga rumah, penenang, dan salah satu alasan aku bersyukur setiap hari nya. May your smile never fade and your heart always stay this pure. Happy birthday sayangg, i wish i could be there to celebrate you and see your smile in person. I’m sorry i cant be by your side today, but i promise we’ll make up for it when we meet, okayy. I love you more than words could ever explain, and I always will.`
+];
+
+// OPEN LETTER STAGE
+document.getElementById("arrowBtn").addEventListener("click", function(){
+    document.getElementById("bouquetStage").classList.add("hidden");
+    document.getElementById("arrowStage").classList.add("hidden");
+    document.getElementById("letterStage").classList.remove("hidden");
+});
+
+// CLICK LETTER FLOW
+document.getElementById("closedLetter").addEventListener("click", function(){
+
+    if(letterStep === 0){
+        document.getElementById("ribbon").style.display="none";
+        letterStep++;
+    }
+    else if(letterStep === 1){
+        document.getElementById("letterLid").style.transform="rotateX(180deg)";
+        letterStep++;
+    }
+    else if(letterStep === 2){
+        document.getElementById("closedLetter").classList.add("hidden");
+        document.getElementById("giftCard").classList.remove("hidden");
+        letterOpened = true;
+        typePage();
+    }
+
+});
+
+// TYPEWRITER EFFECT
+function typePage(){
+    let text = cardPages[currentCardPage];
+    let i=0;
+    let typed = document.getElementById("typedText");
+    let skipBtn = document.getElementById("skipBtn");
+
+    typed.innerHTML="";
+    document.getElementById("cardNav").innerHTML="";
+    document.getElementById("signature").style.display="none";
+
+    skipBtn.style.display="inline-block";
+    isTyping = true;
+
+    typingInterval = setInterval(()=>{
+        typed.innerHTML += text.charAt(i);
+        i++;
+        if(i>=text.length){
+            clearInterval(typingInterval);
+            isTyping = false;
+            skipBtn.style.display="none";
+            setTimeout(showNav,500);
+        }
+    },40); 
+}
+
+
+function showFullPage(){
+    let typed = document.getElementById("typedText");
+    typed.innerText = cardPages[currentCardPage];
+    showNav();
+}
+
+// NAVIGATION LOGIC
+function showNav(){
+    let nav = document.getElementById("cardNav");
+    let sign = document.getElementById("signature");
+
+    nav.innerHTML="";
+    sign.style.display="none";
+    sign.innerHTML="";
+
+    if(currentCardPage>0){
+        nav.innerHTML += `<span onclick="prevCard()">⬅ Previous page</span>`;
+    }
+
+    if(currentCardPage<cardPages.length-1){
+        nav.innerHTML += `<span onclick="nextCard()">Next page ➡</span>`;
+    } else {
+        nav.innerHTML += `<span onclick="closeLetter()">Close the letter ➡</span>`;
+
+        // tampilkan signature hanya di page terakhir
+        sign.style.display="block";
+        sign.innerHTML="From: Ahmad Ghifari Firzatullah";
+    }
+}
+
+function nextCard(){
+    currentCardPage++;
+    typePage();
+}
+
+function prevCard(){
+    currentCardPage--;
+    showFullPage(); // langsung tampil
+}
+
+function closeLetter(){
+
+    document.getElementById("giftCard").classList.add("hidden");
+    document.getElementById("closedLetter").classList.remove("hidden");
+
+    document.getElementById("letterLid").style.transform="rotateX(0deg)";
+    document.getElementById("ribbon").style.display="block";
+
+    // tampilkan tombol kembali ke gift
+    let closed = document.getElementById("closedLetter");
+
+    closed.innerHTML += `
+        <div id="backArrow" 
+        style="position:absolute; bottom:-40px; width:100%; text-align:center; font-weight:bold; cursor:pointer;">
+        ⬅ Look at the gift
+        </div>
+    `;
+
+    document.getElementById("backArrow").onclick = backToGift;
+}
+
+function reopenLetter(){
+    document.getElementById("closedLetter").classList.add("hidden");
+    document.getElementById("giftCard").classList.remove("hidden");
+    document.getElementById("typedText").innerText = cardPages[currentCardPage];
+    showNav();
+}
+
+function backToGift(){
+
+    let arrow = document.getElementById("backArrow");
+    if(arrow) arrow.remove();
+
+    document.getElementById("letterStage").classList.add("hidden");
+    document.getElementById("bouquetStage").classList.remove("hidden");
+}
+
+document.getElementById("skipBtn").addEventListener("click", function(){
+
+    if(isTyping){
+        clearInterval(typingInterval);
+        document.getElementById("typedText").innerText = cardPages[currentCardPage];
+        document.getElementById("skipBtn").style.display="none";
+        isTyping = false;
+        showNav();
+    }
+
+});
+
+</script>
+
+<audio id="bgMusic" loop>
+    <source src="birthday.mp4" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
