@@ -14,7 +14,7 @@ padding:0;
 font-family:'Segoe UI',sans-serif;
 background:linear-gradient(to top,#ffdde1,#ee9ca7);
 transition: background 1s ease;
-height:100vh;
+min-height:100vh; 
 overflow:hidden;
 display:flex;
 justify-content:center;
@@ -316,6 +316,48 @@ background:#ff758f;
 .bg-photo{
     background: url('bebe.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+@media (max-width: 768px){
+
+  h1{
+    font-size: 26px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  .cake{
+    width:150px;
+    height:110px;
+  }
+
+  .gift-box{
+    width:120px;
+    height:120px;
+  }
+
+  .letter{
+    width:95%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+
+  .gift-card{
+    width:95%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+
+  #surpriseText{
+    font-size:24px;
+  }
+
+  .bouquet{
+    width:250px;
+  }
+
 }
 
 </style>
